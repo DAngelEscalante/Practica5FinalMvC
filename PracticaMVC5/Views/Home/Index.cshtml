@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Listado  de Peliculas";
+}
+
+@model List<PracticaMVC5.Models.Peliculas>
+
+    <table>
+        <tr>
+            <th>
+                Titulo
+            </th>
+            <th></th>
+            <th>
+                Director
+            </th>
+            <th></th>
+            <th>
+                Autor Principal
+            </th>
+            <th></th>
+            <th>
+                Num. Autores
+            </th>
+            <th></th>
+            <th>
+                Duracion
+            </th>
+            <th></th>
+            <th>
+                Estreno
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+
+        </td>
+        <th></th>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director)
+        </td>
+        <th></th>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.AutorPrincipal)
+        </td>
+        <th></th>
+        <td>
+        
+            @Html.DisplayFor(modelItem => item.NumAutores)
+            </td>
+        <th>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duracion)
+        </td>
+        <th></th>
+        <td>
+
+            @Html.DisplayFor(modelItem => item.Estreno)
+        </td>
+        <th></th>
+    </tr>
+        }
+    </table>
